@@ -5,16 +5,25 @@
 
 
 def primeira_maiuscula(frase):
-  temp = frase.split()                               #Divide a frase em uma lista pra analisar mais facilmente cada palavra
-  check = 1                                          #Cria uma variável de comparação para saber quando deve ser maísuscula
-  for i in temp:                                     #Pra cada uma das palavras...
-    if check == 1:                                   #Verifica se deve ser maiuscula
-      print(i.capitalize(), end=' ')                 #Caso seja, imprime a letra maiuscula...
-      check = 0                                      #E define o valor da comparação para 0
-    else:                                            #Caso não deva ser maiuscula...
-      print(i, end=' ')                              #Imprime a palavra normalmente
-    if i[-1] == '.' or i[-1] == '!' or i[-1] == '?': #Se a palavra termina com alguma pontuação...
-      check = 1                                      #A próxima palavra será maiuscula
+  #Divide a frase em uma lista pra analisar mais facilmente cada palavra
+  temp = frase.split()       
+  
+  #Cria uma variável de comparação para saber quando deve ser maísuscula
+  check = 1       
 
-#frase = input()
-#primeira_maiuscula(frase)
+  #Pra cada uma das palavras na lista, verifica se a variável de comparação indica que deve ser maiúscula e imprime a palavra de acordo, 
+  #ajustando a variável caso utilizada
+  for i in temp:                                     
+    if check == 1:                                   
+      print(i.capitalize(), end=' ')                 
+      check = 0                                      
+    else:                                         
+      print(i, end=' ')      
+
+    #Verifica se o ultimo caracter é pontuação e ajusta a variável caso seja
+    if i[-1] == '.' or i[-1] == '!' or i[-1] == '?':
+      check = 1                                     
+
+#Teste da função
+frase = input()
+primeira_maiuscula(frase)
