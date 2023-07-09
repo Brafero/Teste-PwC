@@ -1,5 +1,0 @@
-def reverter_ordem(palavra):
-  temp = palavra.split()                 #Divide as diferentes palavras da frase e as armazena em uma lista
-  temp.reverse()                         #Inverte a ordem das palavras, deixando como o enunciado pede
-  for i in temp:
-    print(i, end=' ')                    #Imprime palavra por palavra
