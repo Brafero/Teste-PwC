@@ -1,4 +1,9 @@
 #Exercicio 4
+#Lógica usada: Em um parágrafo, a primeira palavra e todas as que sucedem ".", "!" ou "?" devem ter a primeira letra maiúscula.
+#Com isso, pensei em verificar se o último caracter de cada palavra é uma pontuação, o que implicaria que a próxima palavra
+#deve ter a primeira letra maiúscula. 
+
+
 def primeira_maiuscula(frase):
   temp = frase.split()                               #Divide a frase em uma lista pra analisar mais facilmente cada palavra
   check = 1                                          #Cria uma variável de comparação para saber quando deve ser maísuscula
