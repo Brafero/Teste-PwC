@@ -31,6 +31,6 @@ def anagrama_palindromo(palavra):
   else:
     print("true")
         
-
+#Teste da função
 palavra = input()
 anagrama_palindromo(palavra)
